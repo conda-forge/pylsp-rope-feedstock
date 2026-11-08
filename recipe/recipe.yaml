@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pylsp-rope
-  version: 0.1.17
+  version: "0.1.18"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pylsp_rope-${{ version }}.tar.gz
-  sha256: 4cd6f2fb32c84302b94cb4ce002bc0700b1b656dd5147e7db3dd92303a9a8dc2
+  sha256: 2cbca6f7a02d82b49c6efdbed1f2a933d751bba079c903c81732218622cf5380
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
