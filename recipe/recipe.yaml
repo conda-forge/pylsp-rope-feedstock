@@ -32,7 +32,9 @@ tests:
   - python:
       imports:
         - pylsp_rope
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
