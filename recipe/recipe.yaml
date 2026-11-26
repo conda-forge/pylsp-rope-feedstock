@@ -1,19 +1,18 @@
 schema_version: 1
 
 context:
-  name: pylsp-rope
   version: "0.1.18"
 
 package:
-  name: ${{ name|lower }}
+  name: pylsp-rope
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pylsp_rope-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pylsp-rope/pylsp_rope-${{ version }}.tar.gz
   sha256: 2cbca6f7a02d82b49c6efdbed1f2a933d751bba079c903c81732218622cf5380
 
 build:
-  number: 0
+  number: 2
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -26,7 +25,6 @@ requirements:
     - python >=${{ python_min }}
     - python-lsp-server-base
     - rope >=0.21.0
-    - typing_extensions
 
 tests:
   - python:
