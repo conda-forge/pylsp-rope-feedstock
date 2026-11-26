@@ -13,7 +13,7 @@ source:
   sha256: 2cbca6f7a02d82b49c6efdbed1f2a933d751bba079c903c81732218622cf5380
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -26,7 +26,6 @@ requirements:
     - python >=${{ python_min }}
     - python-lsp-server-base
     - rope >=0.21.0
-    - typing_extensions
 
 tests:
   - python:
