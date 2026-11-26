@@ -1,15 +1,14 @@
 schema_version: 1
 
 context:
-  name: pylsp-rope
   version: "0.1.18"
 
 package:
-  name: ${{ name|lower }}
+  name: pylsp-rope
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pylsp_rope-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pylsp-rope/pylsp_rope-${{ version }}.tar.gz
   sha256: 2cbca6f7a02d82b49c6efdbed1f2a933d751bba079c903c81732218622cf5380
 
 build:
@@ -48,6 +47,5 @@ about:
   homepage: https://github.com/python-rope/pylsp-rope
 
 extra:
-  feedstock-name: pylsp-rope
   recipe-maintainers:
     - JaRoSchm
